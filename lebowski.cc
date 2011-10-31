@@ -4,11 +4,34 @@
 
 using namespace std;
 
+/*
+   For example, the array {4, 3, 1, 8, 5, 1, 1, 1} is a Lebowski array because:
+   a. 4 is even and 4 = 3 + 1 (3 and 1 are odd) 
+   b. 8 is even and 8 = 5 + 1 + 1 + 1 (5 and 1 are odd) 
+   */
 int isLebowski(int a[ ], int len)
 {
-  return 0;
-}
+  int j=0,sum=0;
 
+  bool isLeb=true;
+  for (int i=0;i<len;i++)
+  {
+    if (0==a[i]%2)
+    {
+      j=i+1;
+      while ( 0!=a[j]%2)
+      {
+        sum+=a[j++];
+      }
+      if ( a[i]!=sum)
+        isLeb=false;
+    }
+  }
+  if(isLeb)
+    return 1;
+  else
+    return 0;
+}
 int main() 
 {
   int a[] ={4} ;//0 no odd-valued elements immediately follow 4
