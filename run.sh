@@ -1,2 +1,2 @@
 make -B \
-&& ./jeffian_array.exe
+&& ./lebowski.exe

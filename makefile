@@ -1,5 +1,5 @@
-OBJECTS = jeffian_array.exe
-LOCFLAGS = -I../jeffian_array
+OBJECTS = lebowski.exe
+LOCFLAGS = -I../lebowski
 CC = g++
 CCFLAGS = -ansi -W -Wall -lstdc++
 LOCFLAGS =
