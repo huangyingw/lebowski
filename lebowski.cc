@@ -12,13 +12,15 @@ using namespace std;
 int isLebowski(int a[ ], int len)
 {
   int j=0,sum=0;
-
   bool isLeb=true;
   for (int i=0;i<len;i++)
   {
     if (0==a[i]%2)
     {
+      sum=0;
       j=i+1;
+      if (0==a[j]%2)
+        return 0;
       while ( 0!=a[j]%2)
       {
         sum+=a[j++];
@@ -63,6 +65,18 @@ int main()
 
   int j[]={5, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1};//1 2 == 1 + 1. Note that a Lebowski array does not have to begin with an even number.
   cout<<isLebowski(j,sizeof(j)/sizeof(int))<<endl;
+  /*
+     0
+     0
+     1
+     0
+     1
+     1
+     0
+     0
+     1
+     1
+     */
 
   return 0;
 }
