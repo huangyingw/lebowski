@@ -23,7 +23,7 @@ int isLebowski(int a[ ], int len)
         return 0;
       while ( 0!=a[j]%2)
       {
-        cout<<"sum add"<<a[j]<<endl;
+        cout<<"sum add "<<a[j]<<endl;
         sum+=a[j++];
         cout<<"sum ="<<sum <<endl;
       }
