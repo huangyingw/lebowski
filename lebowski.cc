@@ -12,7 +12,7 @@ using namespace std;
 int isLebowski(int a[ ], int len)
 {
   int j=0,sum=0;
-  bool isLeb=true;
+  int isLeb=1;
   for (int i=0;i<len;i++)
   {
     if (0==a[i]%2)
@@ -26,13 +26,10 @@ int isLebowski(int a[ ], int len)
         sum+=a[j++];
       }
       if ( a[i]!=sum)
-        isLeb=false;
+        isLeb=0;
     }
   }
-  if(isLeb)
-    return 1;
-  else
-    return 0;
+  return isLeb;
 }
 int main() 
 {
